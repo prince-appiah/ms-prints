@@ -16,7 +16,7 @@ const session = require("express-session");
 const flash = require("connect-flash");
 const morgan = require('morgan');
 const MongoStore = require('connect-mongo')(session);
-require('dotenv').config({ path: '.env' });
+require('dotenv')
 
 const db = require('./config/database');
 const User = require("./models/User");
