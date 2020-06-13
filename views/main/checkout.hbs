@@ -1,0 +1,98 @@
+<div class="site-section">
+<div class="container">
+<div class="row justify-content-center">
+  <div class="col-md-10">
+    <div class="row mb-5">
+      <div class="col-md-12">
+        <h2 class="h3 mb-3 text-black">Your Order</h2>
+          <div class="p-3 p-lg-5 border">
+
+            <table class="table site-block-order-table mb-5">
+              <tbody>
+                <tr>
+                  <td class="text-black font-weight-bold"><strong>Order Total</strong></td>
+                  <td class="text-black font-weight-bold"><strong>$ {{totalPrice}}</strong></td>
+                </tr>
+              </tbody>
+            </table>
+            <form action="/checkout" method="POST">
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <label for="firstName" class="text-black">First Name <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="firstName" name="firstName">
+                </div>
+                <div class="col-md-6">
+                  <label for="lastName" class="text-black">Last Name <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="lastName" name="lastName">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-md-12">
+                  <label for="address" class="text-black">Street Address <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="address" name="address" placeholder="Street address">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <label for="region" class="text-black">Region <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="region" name="region">
+                </div>
+                <div class="col-md-6">
+                  <label for="town" class="text-black">Town / City<span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="town" name="town">
+                </div>
+              </div>
+
+              <div class="form-group row mb-5">
+                <div class="col-md-6">
+                  <label for="emailAddress" class="text-black">Email Address <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="emailAddress" name="emailAddress">
+                </div>
+                <div class="col-md-6">
+                  <label for="phoneNumber" class="text-black">Phone <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Phone Number">
+                </div>
+              </div>
+
+
+              <div class="border p-3 mb-3">
+                <h3 class="h6 mb-0">
+                  <a class="d-block" data-toggle="collapse" href="#collapsecheque" role="button" aria-expanded="false" aria-controls="collapsecheque">
+                    Mobile Money
+                  </a>
+                </h3>
+                  <div class="collapse" id="collapsecheque">
+                    <div class="py-2">
+                      <div class="mobile-money-qr-payment" 
+                          id="my-unique-identifer" 
+                          data-api-user-id="b12d7b22-3057-4c8e-ad50-63904171d18c" 
+                          data-amount="{{totalPrice}}"   
+                          data-currency="EUR" 
+                          data-external-id="144-123-3232"
+                          >
+                        <object data="/images/mtnmomo.svg" type="image/svg+xml">
+                          <img src="/images/mtnmomo.svg" class="center" height="20" style="background-color: #ffcc30;">
+                        </object>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="form-group">
+                <button class="btn btn-primary btn-lg btn-block" onclick="window.location='/thank-you'">Place Order</button>
+              </div>
+            </form>  
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- </form> -->
+</div>
+</div>
+
+
+
+

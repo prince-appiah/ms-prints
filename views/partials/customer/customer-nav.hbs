@@ -1,0 +1,76 @@
+<div class="site-navbar bg-white py-2">
+
+      {{!-- <div class="search-wrap">
+        <div class="container">
+          <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+          <form action="#" method="post">
+            <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
+          </form>  
+        </div>
+      </div> --}}
+
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <div class="site-logo">
+              <a href="/" class="js-logo-clone">M&amp;S Prints</a>
+            </div>
+          </div>
+          <div class="main-nav d-none d-lg-block ml-5">
+            <nav class="site-navigation text-right text-md-center" role="navigation">
+              <ul class="site-menu js-clone-nav d-none d-lg-block">    
+                <li><a href="/">Shop</a></li>
+                {{#if login}}
+                  <li><a href="#">My Account</a></li>
+                  <li><a href="#">My Orders</a></li>
+                {{/if}}
+              </ul>
+            </nav>
+          </div>
+          <div class="icons ml-auto">
+            {{!-- <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a> --}}
+            {{!-- <a href="#" class="icons-btn d-inline-block"><span class="icon-heart-o"></span></a> --}}         
+          {{#if login}}
+            <a href="/cart" class="icons-btn d-inline-block bag">
+              <span class="icon-shopping-bag"></span>
+              <span class="number"> {{#if session.cart}} {{session.cart.totalQty}} {{else}} 0 {{/if}} </span>
+            </a>
+            <a href="/customer/sign-out" class="ml-3">
+              <span class="icon-user mr-2"></span>
+              Logout
+            </a>
+          {{else}}
+            <div class="row">
+              <div class="main-nav d-none d-lg-block m-auto">
+                <nav class="site-navigation text-right text-md-center">
+                  <ul class="site-menu js-clone-nav d-none d-lg-block">
+                    <li class="has-children">
+                      <a>Sign In</a>
+                      <ul class="dropdown">
+                        <li><a href="/admin/sign-in">I'm an admin</a></li>
+                        <li><a href="/customer/sign-in">I'm a customer</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>    
+              <div class="main-nav d-none d-lg-block m-auto">
+                <nav class="site-navigation text-right text-md-center">
+                  <ul class="site-menu js-clone-nav d-none d-md-block">
+                    <li class="has-children">
+                      <a>Sign Up</a>
+                      <ul class="dropdown">
+                        <li><a href="/admin/sign-up">I'm an admin</a></li>
+                        <li><a href="/customer/sign-up">I'm a customer</a></li>            
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>    
+            </div>
+          {{/if}}
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>

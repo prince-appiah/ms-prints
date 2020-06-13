@@ -1,0 +1,45 @@
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="title-section mb-5 col-12">
+        <h2 class="text-uppercase">Our Products</h2>
+      </div>
+    </div>
+    <div class="row">
+      {{#each products}}
+        <div class="col-lg-4 col-md-6 item-entry mb-4">
+          <a href="/products/{{id}}" class="product-item md-height bg-gray d-block">
+            <!--<img src="/images/prod_2.png" alt="Image" class="img-fluid">-->
+            <img src="/uploads/{{image}}" alt="Image" class="img-fluid">
+          </a>
+
+          <div class="row">
+            <div class="col-xl-5 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+              <h2 class="item-title"><a href="/products/{{id}}">{{name}}</a></h2>
+              <strong class="item-price">$ {{price}}</strong>
+              <strong class="ml-1"> {{quantity}}/pieces</strong>
+            </div>
+
+            <div class="col-xl-7 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <button class="btn btn-outline-dark" onclick="window.location='/cart/add/{{id}}'">
+                  <a>
+                    <span class="icon-plus"></span> Add to Cart
+                  </a>
+                </button>
+
+                <button class="btn btn-primary">
+                  Buy
+                </button> 
+            </div>
+          </div>
+        </div>
+      {{else}}
+      <div class="container alert alert-info text-center">
+        <h4>
+          We have no products in stock at the moment. Please check again later
+        </h4>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
