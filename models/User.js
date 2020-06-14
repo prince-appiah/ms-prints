@@ -3,9 +3,12 @@ const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
 
-    isAdmin: {
-        type: Boolean,
-        default: false
+    googleID: {
+        type: String
+    },
+
+    image: {
+        type: String
     },
 
     firstName: {

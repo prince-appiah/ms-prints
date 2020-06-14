@@ -96,7 +96,6 @@ passport.use('local.customer',
 
 // POST - LOGIN PAGE
 router.post('/sign-in', (req, res, next) => {
-    // console.log('customer');
     passport.authenticate('local.customer', {
         successRedirect: '/',
         failureRedirect: '/customer/sign-in',

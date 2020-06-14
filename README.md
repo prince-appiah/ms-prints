@@ -1,5 +1,6 @@
 # M & S Print
 A simple ecommerce store built in NodeJS with the Express Framework, MongoDB and HandlebarsJS.
+Built with sharp-edged technologies, this application also supports Local and Google Oauth 2.0 Strategies with Passport.js.
 
 ## Note
 This web application is still under development. :smile:
@@ -11,7 +12,6 @@ This web application is still under development. :smile:
 - connect\-flash
 - connect\-mongo
 - cookie\-parser
-- csurf
 - dotenv
 - express
 - express\-handlebars
